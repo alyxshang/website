@@ -1,0 +1,330 @@
+:root {
+  --stdPadding: 2rem;
+  --bgColor: #000000;
+  --accentColor:#C8B6FF;
+  --tertiaryColor: #FFFFFF;
+  --headingFont: 'OwreKynge';
+  --pageHeadingFont: 'FluroBold';
+  --pageSubtitleFont: 'SCP-Regular';
+}
+html {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+  height: 100%;
+  background-color: var(--bgColor);
+}
+div.wrapper {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+div.heading { 
+  margin: 0px;
+  padding: 0px;
+  display: flex;  
+  height: 100vh;
+  border-top: none;
+  border-left: none;
+  align-items: center;
+  border-bottom: none;
+  flex-direction: row;
+  justify-content: center;
+  background-color: transparent;
+  border-right: 2px solid var(--accentColor);
+}
+h1 {
+  margin: 0px; 
+  font-size: 6rem;
+  padding: 0px 1.5rem;
+  writing-mode: vertical-rl;
+  color: var(--accentColor);
+  font-family: var(--headingFont);
+}
+div.content {
+  margin: 0px;
+  padding: 0px;
+  flex-grow: 1;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: transparent;
+}
+div.textContent {
+  width: 60%;
+  padding: 0px;
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
+}
+div.breaker {
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+  height: 4rem;
+}
+h2.pageHeading {
+  margin: 0px;
+  font-size: 4rem;
+  text-align: left;
+  padding: 0px 0px 4rem 0px;
+  color: var(--accentColor);
+  font-family: var(--pageHeadingFont);
+}
+p.pageSubtitle {
+  margin: 0px;
+  font-size: 1rem;
+  padding: 0px 0px 4rem 0px;
+  color: var(--accentColor);
+  font-family: var(--pageSubtitleFont);
+}
+a.pageSubtitle {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--tertiaryColor);
+  font-family: var(--pageSubtitleFont);
+}
+a.pageSubtitle:hover {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1rem;
+  text-decoration: underline;
+  color: var(--tertiaryColor);
+  font-family: var(--pageSubtitleFont);
+}
+h2,h3,h4 {
+  margin: 0px; 
+  text-align: left;
+  padding: 0px 0px 10px 0px;
+  color: var(--accentColor);
+  font-family: var(--pageHeadingFont);
+}
+h2 { font-size: 3rem; }
+h3 { font-size: 2.5rem; }
+h4 { font-size: 2rem; }
+p {
+  margin: 0px;
+  line-height: 1.6;
+  font-size: 1.25rem;
+  padding: 0px 0px 5rem 0px;
+  color: var(--tertiaryColor);
+  font-family: var(--pageSubtitleFont);
+}
+a {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.25rem;
+  text-decoration: underline;
+  color: var(--tertiaryColor);
+  font-family: var(--pageSubtitleFont);
+}
+img {
+  width: 100%;
+  padding: 0px;
+  border-radius: 15px;
+  margin: 0px 0px 5rem 0px;
+  border: 2px solid var(--accentColor);
+}
+ul {
+  width: 100%;
+  padding: 0px;
+  text-align: left;
+  list-style: none;
+  margin: 0px 0px 5rem 0px;
+}
+li {
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.6;
+  font-size: 1.25rem; 
+  color: var(--tertiaryColor);
+  font-family: var(--pageSubtitleFont);
+}
+li::before { 
+  margin: 0px;
+  content: '-';
+  line-height: 1.6;
+  font-size: 1.25rem; 
+  padding: 0px 5px 0px 0px;
+  color: var(--tertiaryColor);
+  font-family: var(--pageSubtitleFont);
+}
+div.stripes {  
+  padding: 0px;
+  height: 2rem;
+  display: inline-block;
+  margin: var(--stdPadding);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--accentColor),
+    var(--accentColor) 25px,
+    var(--bgColor) 10px,
+    var(--bgColor) 50px
+  );
+  width: calc(100% - (var(--stdPadding) * 2));
+}
+div.landingContainer { 
+  padding: 0px;
+  display: flex;
+  flex-direction: row; 
+  gap: var(--stdPadding);
+  height: calc(100vh - 12rem);
+  margin: 0px var(--stdPadding);   
+  width: calc(100% - (var(--stdPadding) * 3));
+}
+div.column { 
+  margin: 0px; 
+  padding: 0px;
+  height: 100%;
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+div.infoContainers {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  box-sizing:border-box; 
+  flex-direction: column; 
+  justify-content: space-between;
+}
+/* RIGHT COLUMN START */
+div.textContainer {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 15px;
+  background-color: transparent;
+}
+p.infoText {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1rem;
+  text-align: left;
+  color: var(--accentColor); 
+  font-family: var(--pageSubtitleFont);
+}
+ul.infoText {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-align: left;
+}
+li.infoText { 
+  margin: 0px;
+  padding: 0px; 
+  line-height: 1;
+  font-size: 3rem;
+  color: var(--accentColor);
+  font-family: var(--pageHeadingFont);
+}
+li.infoText::before {
+  content: none;
+}
+a.infoText, a.listItem { 
+  width: 100%;
+  margin: 0px;
+  padding: 0px; 
+  display: flex;
+  line-height: 1;
+  font-size: 3rem;
+  align-items: baseline;
+  text-decoration: none;
+  color: var(--accentColor); 
+  transition-duration: 0.6s;
+  font-family: var(--pageHeadingFont);
+}
+a.infoText:hover, a.listItem:hover {
+  text-decoration: underline;
+}
+a.infoText::after, a.listItem::after {
+  order: 1;
+  content: '';
+  flex-grow: 1;  
+  opacity: 0.4;
+  position: relative;
+  border-bottom: 3px dotted var(--accentColor);
+}
+a.infoText, a.listItem .meta {
+  order: 2;
+  margin: 0px;
+  padding: 0px;
+  opacity: 1.25;
+  font-weight: bold;
+  font-size: 1.25rem; 
+  color: var(--accentColor); 
+  font-family: var(--pageSubtitleFont);
+}
+a.infoText, a.listItem .meta:hover {
+  text-decoration: none;
+}
+/* RIGHT COLUMN END */
+
+/* LEFT COLUMN START */
+h2.titleText {
+  margin: 0px;
+  padding: 0px;
+  line-height: 1;
+  font-size: 3.5rem;
+  text-align: left;
+  color: var(--accentColor);
+  font-family: var(--pageHeadingFont); 
+}
+img.avatar { 
+  width: 60%;
+  padding: 0px;
+  margin: 0 auto;
+  aspect-ratio: 1;
+  border: 2px solid var(--accentColor);
+}
+/* LEFT COLUMN END */
+
+/* LIST START */
+div.listItems {
+  padding: 0px;
+  min-height: calc(100vh - 12rem);
+  background-color: transparent;
+  margin: 0px var(--stdPadding);
+  width: calc(100% - (var(--stdPadding) * 2));
+}
+h2.listHeader {
+  padding: 0px;
+  line-height: 1;
+  font-size: 3.5rem;
+  font-style: italic;
+  color: var(--accentColor);
+  font-family: var(--pageHeadingFont);
+  margin: 0px 0px var(--stdPadding) 0px;
+}
+p.listItem {
+  margin: 0px;
+  padding: 0px;
+  font-size: 3rem;
+  color: var(--accentColor);
+  font-family: var(--pageHeadingFont);
+}
+/* LIST END */
