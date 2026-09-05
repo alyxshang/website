@@ -1,7 +1,7 @@
 :root {
   --stdPadding: 2rem;
   --bgColor: #000000;
-  --accentColor:#C8B6FF;
+  --accentColor:#FFFFFF;
   --tertiaryColor: #FFFFFF;
   --headingFont: 'OwreKynge';
   --pageHeadingFont: 'FluroBold';
@@ -28,6 +28,8 @@ body {
   height: 100%;
   background-color: var(--bgColor);
 }
+
+/* DESKTOP WRAPPER START */
 div.wrapper {
   top: 0;
   left: 0;
@@ -40,6 +42,9 @@ div.wrapper {
   display: flex;
   flex-direction: row;
 }
+/* DESKTOP WRAPPER END */
+
+/* HEADING COLUMN START */
 div.heading { 
   margin: 0px;
   padding: 0px;
@@ -62,6 +67,8 @@ h1 {
   color: var(--accentColor);
   font-family: var(--headingFont);
 }
+/* HEADING COLUMN END */
+
 div.content {
   margin: 0px;
   padding: 0px;
@@ -70,6 +77,8 @@ div.content {
   overflow-y: scroll;
   background-color: transparent;
 }
+
+/* PAGE LAYOUT START */
 div.textContent {
   width: 60%;
   padding: 0px;
@@ -185,6 +194,9 @@ div.stripes {
   );
   width: calc(100% - (var(--stdPadding) * 2));
 }
+/* PAGE LAYOUT END */
+
+/* LANDING LAYOUT START */
 div.landingContainer { 
   padding: 0px;
   display: flex;
@@ -202,6 +214,9 @@ div.column {
   box-sizing: border-box;
   background-color: transparent;
 }
+/* LANDING LAYOUT END */
+
+/* LANDING VERTICAL COLUMN CONTAINER START */
 div.infoContainers {
   margin: 0px;
   padding: 0px;
@@ -212,7 +227,9 @@ div.infoContainers {
   flex-direction: column; 
   justify-content: space-between;
 }
-/* RIGHT COLUMN START */
+/* LANDING VERTICAL COLUMN CONTAINER END */
+
+/* LANDING RIGHT COLUMN START */
 div.textContainer {
   width: 100%;
   margin: 0px;
@@ -238,14 +255,14 @@ li.infoText {
   margin: 0px;
   padding: 0px; 
   line-height: 1;
-  font-size: 3rem;
+  font-size: 3rem; 
   color: var(--accentColor);
   font-family: var(--pageHeadingFont);
 }
 li.infoText::before {
   content: none;
 }
-a.infoText, a.listItem { 
+a.infoText { 
   width: 100%;
   margin: 0px;
   padding: 0px; 
@@ -256,35 +273,33 @@ a.infoText, a.listItem {
   text-decoration: none;
   color: var(--accentColor); 
   transition-duration: 0.6s;
+  justify-content: space-between;
   font-family: var(--pageHeadingFont);
 }
-a.infoText:hover, a.listItem:hover {
-  text-decoration: underline;
-}
-a.infoText::after, a.listItem::after {
-  order: 1;
-  content: '';
-  flex-grow: 1;  
-  opacity: 0.4;
-  position: relative;
-  border-bottom: 3px dotted var(--accentColor);
-}
-a.infoText, a.listItem .meta {
-  order: 2;
+span.linkItem {
   margin: 0px;
   padding: 0px;
-  opacity: 1.25;
-  font-weight: bold;
-  font-size: 1.25rem; 
+  font-size: 3rem;
+  color: var(--accentColor); 
+  font-family: var(--pageHeadingFont);
+}
+span.linkItemText {
+  margin: 0px;
+  padding: 0px;
+  font-size: 2rem;
   color: var(--accentColor); 
   font-family: var(--pageSubtitleFont);
 }
-a.infoText, a.listItem .meta:hover {
-  text-decoration: none;
+div.dots {
+  flex: 1;
+  margin: 0ox;
+  padding: 0px; 
+  background-color: transparent;
+  border-bottom: 3px dotted var(--accentColor);
 }
-/* RIGHT COLUMN END */
+/* LANDING RIGHT COLUMN END */
 
-/* LEFT COLUMN START */
+/* LANDING LEFT COLUMN START */
 h2.titleText {
   margin: 0px;
   padding: 0px;
@@ -301,9 +316,9 @@ img.avatar {
   aspect-ratio: 1;
   border: 2px solid var(--accentColor);
 }
-/* LEFT COLUMN END */
+/* LANDING LEFT COLUMN END */
 
-/* LIST START */
+/* LIST VIEW START */
 div.listItems {
   padding: 0px;
   min-height: calc(100vh - 12rem);
@@ -327,4 +342,4 @@ p.listItem {
   color: var(--accentColor);
   font-family: var(--pageHeadingFont);
 }
-/* LIST END */
+/* LIST VIEW END */
