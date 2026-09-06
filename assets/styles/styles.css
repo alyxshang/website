@@ -267,7 +267,7 @@ li.infoText {
   margin: 0px;
   padding: 0px; 
   line-height: 1;
-  font-size: 3rem; 
+  font-size: 2.75rem; 
   color: var(--accentColor);
   font-family: var(--pageHeadingFont);
 }
@@ -280,7 +280,7 @@ a.infoText {
   padding: 0px; 
   display: flex;
   line-height: 1;
-  font-size: 3rem;
+  font-size: 2.75rem;
   align-items: baseline;
   text-decoration: none;
   color: var(--accentColor); 
@@ -291,14 +291,14 @@ a.infoText {
 span.linkItem {
   margin: 0px;
   padding: 0px;
-  font-size: 3rem;
+  font-size: 2.75rem;
   color: var(--accentColor); 
   font-family: var(--pageHeadingFont);
 }
 span.linkItemText {
   margin: 0px;
   padding: 0px;
-  font-size: 2rem;
+  font-size: 1.25rem;
   color: var(--accentColor); 
   font-family: var(--pageSubtitleFont);
 }
