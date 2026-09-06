@@ -318,11 +318,30 @@ h2.titleText {
   font-family: var(--pageHeadingFont); 
 }
 img.avatar { 
-  width: 60%;
+  width: 65%;
   padding: 0px;
   margin: 0 auto;
   aspect-ratio: 1;
   border-radius: 0px;
+  /* EIGHT-POINTED STAR */
+  /*clip-path: polygon(
+    50% 0%,
+    62% 25%,
+    85% 15%,
+    75% 38%,
+    100% 50%,
+    75% 62%,
+    85% 85%,
+    62% 75%,
+    50% 100%,
+    38% 75%,
+    15% 85%,
+    25% 62%,
+    0% 50%,
+    25% 38%,
+    15% 15%,
+    38% 25%
+  );*/
   border: 2px solid var(--accentColor);
 }
 /* LANDING LEFT COLUMN END */
@@ -366,17 +385,17 @@ img.avatar {
   p,a,li {
     font-size: 1rem;
   }
-  /* PAGE LAYOUT END */
+  /* PAGE LAYOUT END */ 
   div.landingContainer {
     gap: 0px;
-    width: calc(100vw - (var(--stdPadding) * 2));
-    height: 100%;
+    height: auto;
+    align-items: start;
     flex-direction: column;  
     margin:  0px var(--stdPadding); 
-  }
-  div.column { 
-    width: 100%;
-    min-height: 100%;
+    width: calc(100vw - (var(--stdPadding) * 2));
+  } 
+  div.infoContainers {
+    justify-content: flex-start;
   }
   /* PAGE LAYOUT END */
 
@@ -387,45 +406,10 @@ img.avatar {
   /* LEFT COLUMN END */
 
   /* RIGHT COLUMN START */ 
-li.infoText { 
-  margin: 0px;
-  padding: 0px; 
-  line-height: 1;
-  font-size: 2.5rem; 
-  color: var(--accentColor);
-  font-family: var(--pageHeadingFont);
-}
-li.infoText::before {
-  content: none;
-}
-a.infoText { 
-  width: 100%;
-  margin: 0px;
-  padding: 0px; 
-  display: flex;
-  line-height: 1;
-  font-size: 2rem;
-  align-items: baseline;
-  text-decoration: none;
-  color: var(--accentColor); 
-  transition-duration: 0.6s;
-  justify-content: space-between;
-  font-family: var(--pageHeadingFont);
-}
-span.linkItem {
-  margin: 0px;
-  padding: 0px;
-  font-size: 2rem;
-  color: var(--accentColor); 
-  font-family: var(--pageHeadingFont);
-}
-span.linkItemText {
-  margin: 0px;
-  padding: 0px;
-  font-size: 1.5rem;
-  color: var(--accentColor); 
-  font-family: var(--pageSubtitleFont);
-}  /* RIGHT COLUMN END */
+  li.infoText { 
+    font-size: 2rem; 
+  }
+  /* RIGHT COLUMN END */
 }
 
 /* MOBILE SECTION END */
