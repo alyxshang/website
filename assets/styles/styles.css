@@ -191,7 +191,6 @@ li::before {
 div.stripes {  
   padding: 0px;
   height: 2rem;
-  position: relative;
   display: block;
   margin: var(--stdPadding);
   background: repeating-linear-gradient(
@@ -369,21 +368,16 @@ img.avatar {
   }
   /* PAGE LAYOUT END */
   div.landingContainer {
-    width: 100%;
+    gap: 0px;
+    width: calc(100vw - (var(--stdPadding) * 2));
     height: 100%;
-    flex-direction: column; 
-    gap: var(--stdPadding); 
+    flex-direction: column;  
     margin:  0px var(--stdPadding); 
   }
-div.column { 
-  width: calc(100vw - (var(--stdPadding) * 3);
-  margin: 0px; 
-  padding: 0px;
-  min-height: 100%;
-  flex: 0 0 100vw;
-  box-sizing: border-box;
-  background-color: transparent;
-}
+  div.column { 
+    width: 100%;
+    min-height: 100%;
+  }
   /* PAGE LAYOUT END */
 
   /* LEFT COULMN START */
@@ -392,14 +386,7 @@ div.column {
   }
   /* LEFT COLUMN END */
 
-  /* RIGHT COLUMN START */
-  div.textContainer {
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-  border-radius: 15px;
-  background-color: transparent;
-}
+  /* RIGHT COLUMN START */ 
 li.infoText { 
   margin: 0px;
   padding: 0px; 
