@@ -194,8 +194,9 @@ li::before {
 }
 code {
   margin: 0px;
-  padding: 5px;
+  padding: 0px;
   line-height: 1;
+  border-radius: 5px;
   font-size: 1.25rem; 
   color: var(--bgColor);
   font-family: var(--pageSubtitleFont);
