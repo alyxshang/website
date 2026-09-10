@@ -6,12 +6,12 @@ Licensed under the FSL v1
 <!DOCTYPE html>
 <html>
  <head>
-  <title>The JMU Specification</title>
+  <title>THE JMU SPECIFICATION</title>
   <meta name="theme-color" content="#000000"/>
   <meta property="og:type" content="website">
   <meta property="og:url" content="/specs/jmu">
   <meta name="msapplication-TileColor" content="#000000"/>
-  <meta property="og:title" content="The JMU Specification"/>
+  <meta property="og:title" content="THE JMU SPECIFICATION"/>
   <link rel="stylesheet" href="/assets/styles/styles.css"/>
   <meta name="description" content="A detailed specification for the Jirai Data Markup Language.">
   <meta property="og:description" content="A detailed specification for the Jirai Data Markup Language."> 
@@ -41,7 +41,7 @@ Licensed under the FSL v1
    <div class="content">
     <div class="textContent">
      <div class="breaker"></div>
-     <h2 class="pageHeading">The JMU Specification</h2>
+     <h2 class="pageHeading">THE JMU SPECIFICATION</h2>
      <h2> Preamble</h2><p>The Jirai Markup Data Language was born out of a need for a new, simpler data markup language for my content-managament system and static-site generator, <a alt="A link to the source code of the Mandy  tatic-site generator" href="https://github.com/alyxshang/mandy">Mandy</a>. The library I was using to deserialize JSON or YAML documents was too large and also made me depend on another person to maintain and keep that library alive. To mitigate both of those problems, I decided that I needed a library of my own and a parser and deserializer for a data markup language that is easier to read and write. <strong>JMU</strong> came out of this effort. The official reference implementation written by me in Rust without the use of any AI can be found <a alt="A link to the reference implementation" href="https://github.com/alyxshang/jmu">here</a>. The only external dependency used by this reference implementation is <code>serde</code>, since this is the most widely-used library in the Rust ecosystem to deserialize data from a text format into a Rust data structure.</p><h2> Syntax</h2><p>JMU's syntax is very simple. JMU markup is a simple series of assignments. Assignments are constituted of a key and a value. The key must always be a string. The value can be any of the data types outlined in the section below.</p><h2> Data types</h2><p>JMU only knows five data types:</p><ul><li> Booleans: Booleans are written as either <code>true</code> or <code>false</code>.</li><li> Integers: Integers are written as a number sequence without a post-decimal position.</li><li> Decimal numbers: Decimal numbers are written as a number sequence with a dot separating pre-decimal position and post-decimal position.</li><li> Strings: Strings are written as a character sequence enclosed by double quotes.</li><li> Assignments blocks: Assignment blocks are enclosed by the pipe character above and below them.</li><li> Lists: Lists are written as a comma-separated list of items. This list of items is enclosed by square brackets on either side and the items inside the list must always be of the same data type. The data type of an item can be any of the other data types supported. The final comma in the list should only be in front of the last item in the last.</li></ul>
     </div>
    </div>
