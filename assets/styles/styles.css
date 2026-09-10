@@ -192,6 +192,15 @@ li::before {
   color: var(--accentColor);
   font-family: var(--pageSubtitleFont);
 }
+code {
+  margin: 0px;
+  padding: 5px;
+  line-height: 1;
+  font-size: 1.25rem; 
+  color: var(--bgColor);
+  font-family: var(--pageSubtitleFont);
+  background-color: var(--accentColor);
+}
 div.stripes {  
   padding: 0px;
   height: 2rem;
@@ -428,7 +437,7 @@ span.listViewItemMeta {
   h2 { font-size: 2.25rem; }
   h3 { font-size: 2.00rem; }
   h4 { font-size: 1.75rem; }
-  p,a,li {
+  p,a,li,code {
     font-size: 1rem;
   }
   /* PAGE LAYOUT END */ 
