@@ -1,0 +1,50 @@
+<!--
+WEBSITE by Alyx Shang.
+Licensed under the FSL v1
+-->
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>The Jirai Specification</title>
+  <meta name="theme-color" content="#000000"/>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/specs/jirai">
+  <meta name="msapplication-TileColor" content="#000000"/>
+  <meta property="og:title" content="The Jirai Specification"/>
+  <link rel="stylesheet" href="/assets/styles/styles.css"/>
+  <meta name="description" content="A detailed specification for the Jirai Markup Language.">
+  <meta property="og:description" content="A detailed specification for the Jirai Markup Language."> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="/assets/favicons/manifest.json"/>
+  <link rel="stylesheet" href="/assets/styles/fonts.css" type="text/css"/>
+  <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png"/>
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png"/>
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png"/>
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png"/>
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png"/>
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png"/>
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png"/>
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png"/> 
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png"/> 
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-icon-192x192.png">
+ </head>
+ <body>
+  <div class="wrapper">
+   <div class="heading">
+    <h1>ALYX SHANG</h1>
+   </div>
+   <div class="content">
+    <div class="textContent">
+     <div class="breaker"></div>
+     <h2 class="pageHeading">The Jirai Specification</h2>
+     <h2> Preamble</h2><p>The Jirai Markup Language was born out of a need for a new, simpler markup language for my content-managament system and static-site generator, <a alt="A link to the source code of the Mandy static-site generator" href="https://github.com/alyxshang/mandy">Mandy</a>. The library I was using to compile Markdown documents into HTML had mixed and unpredictable behaviour and also made me depend on another person to maintain and keep that library alive. To mitigate both of those problems, I decided that I needed a library of my own and a compiler for a markup language that is easier to read and write. <strong>Jirai</strong> came out of this effort. The official reference implementation written by me in Rust without the use of any AI can be found <a alt="A link to the reference implementation" href="https://github.com/alyxshang/jirai">here</a>.</p><h2> Types of Jirai</h2><p>The Jirai language has two variants. One variant allows for a data layer to be added to a Jirai document, whereas the other variant does not include such a data layer. The former is called "Extended Jirai", the latter is simply Jirai. Extended Jirai documents have the file extension <code>.ejirai</code>. Documents containing only Jirai markup without a data layer, only have the <code>.jirai</code> file extension. Extended Jirai is useful in contexts where a data layer is needed to specify different parameters which are specific to the document but should not be included in the document's content.</p><h2> Jirai Syntax</h2><h3> Block elements</h3><p>Jirai has the following block elements:</p><ul><li> Comments: These are demarcated with a hash sign at the beginning of the line and must end with a newline character.</li><li> Unordered lists: Unordered lists start with the first list item. A list item starts with a tilde, followed by a space. Unordered lists must end with a newline character after the last list item.</li><li> Headings: Headings are created in Jirai documents by using the ASCII heart symbol. This heart symbol is constituted by a smaller-than character, followed by the number three. The number of these ASCII heart symbols in sequence, not separated by spaces, indicates the level of the heading. This sequence of ASCII hearts  must be followed by a space. Any text that follows this space is the content of the heading. Headings must always end with a newline character.</li><li> Paragraphs: Paragraphs are introduced by any character that does not introduce any of the three previously-mentioned block elements. All paragraphs must end with a newline character.</li></ul><h3> Inline elements</h3><p>Jirai inline elements can contain other inline elements within them. Jirai currently supports the following inline elements:</p><ul><li> Text: This is just normal text. This text can contain any characters that are not starting characters or end characters for any block elements or inline elements. </li><li> Inline code snippets: Inline code snippets are surrounded by angle brackets and cannot contain newline characters.</li><li> Image links: Image links start with a larger-than sign and an open bracket, followed by a dollar sign. They end with a close bracket and a smaller-than sign. Between the dollar sign and the closing bracket there two sections each enclosed by square brackets. The first section contains the "alt" text for an image. The second section contains the URL to the image. Both sections <strong>must</strong> be supplied.</li><li> Links: Links start with a larger-than sign and an open bracket, followed by a percent sign. They end with a close bracket and a smaller-than sign. Between the percent sign and the closing bracket there three sections each enclosed by square brackets. The first section contains the "alt" text for an image. The second section contains the clickable link text. The third section contains the link's URL. All sections <strong>must</strong> be supplied.</li><li> Bold text: Bold text is surrounded by underscores and cannot contain newline characters.</li><li> Italic text: Italic text is surrounded by asterisks and cannot contain newline characters.</li></ul><h3> Extended Jirai</h3><p>Extended Jirai documents are split into two sections: a data section and a content section. The data section is written in the Jirai Data Markup language and is surrounded by an ASCII smiley at the start and end of the section. Each ASCII smiley is followed by a newline character and the ASCII smileys enclose the data. An ASCII smiley is constituted of an opening bracket, a caret symbol, a dash, another caret symbol and a closing bracket. The content section of an Extended Jirai document is also followed by an ASCII smiley. Extended Jirai documents have three ASCII smileys inside them. More information on the Jirai Data Language can be found <a alt="A link to the reference implementation of the Jirai Data Markup Language" href="https://github.com/alyxshang/jmu">here</a>.</p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
