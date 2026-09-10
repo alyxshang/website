@@ -8,7 +8,9 @@ Licensed under the FSL v1
   --stdPadding: 2rem;
   --bgColor: #000000;
   --accentColor:#FFFFFF;
-  --headingFont: 'OwreKynge';
+  --codeFont: monospace;
+  --default-line-height: 1.2;
+  --headingFont: 'OwreKynge'; 
   --pageHeadingFont: 'FluroBold';
   --pageSubtitleFont: 'SCP-Regular';
 }
@@ -125,14 +127,15 @@ a.pageSubtitle {
   font-size: 1rem;
   text-decoration: none;
   color: var(--accentColor);
+  text-decoration: underline;
   font-family: var(--pageSubtitleFont);
 }
 a.pageSubtitle:hover {
   margin: 0px;
   padding: 0px;
   font-size: 1rem;
-  text-decoration: underline;
   color: var(--accentColor);
+  text-decoration: line-through; 
   font-family: var(--pageSubtitleFont);
 }
 h2,h3,h4 {
@@ -146,12 +149,12 @@ h2 { font-size: 3rem; }
 h3 { font-size: 2.5rem; }
 h4 { font-size: 2rem; }
 p {
-  margin: 0px;
-  line-height: 1;
+  margin: 0px; 
   font-size: 1.25rem; 
   color: var(--accentColor);
   font-family: var(--pageSubtitleFont);
   padding: 0px 0px var(--stdPadding) 0px;
+  line-height: var(--default-line-height);
 }
 a {
   margin: 0px;
@@ -178,29 +181,29 @@ ul {
 li {
   margin: 0px;
   padding: 0px;
-  line-height: 1;
   font-size: 1.25rem; 
   color: var(--accentColor);
   font-family: var(--pageSubtitleFont);
+  line-height: var(--default-line-height);
 }
 li::before { 
   margin: 0px;
   content: '-';
-  line-height: 1;
   font-size: 1.25rem; 
   padding: 0px 5px 0px 0px;
   color: var(--accentColor);
   font-family: var(--pageSubtitleFont);
+  line-height: var(--default-line-height);
 }
 code {
   margin: 0px;
-  padding: 0px;
-  line-height: 1;
+  padding: 0px; 
+  font-size: 1.25rem;
   border-radius: 5px;
-  font-size: 1.25rem; 
   color: var(--bgColor);
-  font-family: var(--pageSubtitleFont);
+  font-family: var(--codeFont);
   background-color: var(--accentColor);
+  line-height: var(--default-line-height);
 }
 div.stripes {  
   padding: 0px;
@@ -243,9 +246,9 @@ div.infoContainers {
   margin: 0px;
   padding: 0px;
   height: 100%;
-  display: flex; 
+  display: flex;  
   box-sizing:border-box; 
-  flex-direction: column; 
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -261,12 +264,12 @@ div.textContainer {
 }
 p.infoText {
   margin: 0px;
-  padding: 0px;
-  line-height: 1; 
-  text-align: left;
-  font-size: 1.25rem;
+  padding: 0px; 
+  font-size: 1.5rem;
+  text-align: left; 
   color: var(--accentColor); 
   font-family: var(--pageSubtitleFont);
+  line-height: var(--default-line-height);
 }
 ul.infoText {
   margin: 0px;
@@ -277,10 +280,10 @@ ul.infoText {
 li.infoText { 
   margin: 0px;
   padding: 0px; 
-  line-height: 1;
-  font-size: 2.75rem; 
+  font-size: 1.75rem; 
   color: var(--accentColor);
   font-family: var(--pageHeadingFont);
+  line-height: var(--default-line-height);
 }
 li.infoText::before {
   content: none;
@@ -290,26 +293,26 @@ a.infoText {
   margin: 0px;
   padding: 0px; 
   display: flex;
-  line-height: 1;
-  font-size: 2.75rem;
+  font-size: 1.75rem;
   align-items: baseline;
   text-decoration: none;
   color: var(--accentColor); 
   transition-duration: 0.6s;
   justify-content: space-between;
   font-family: var(--pageHeadingFont);
+  line-height: var(--default-line-height);
 }
 span.linkItem {
   margin: 0px;
   padding: 0px;
-  font-size: 2.75rem;
+  font-size: 1.75rem;
   color: var(--accentColor); 
   font-family: var(--pageHeadingFont);
 }
 span.linkItemText {
   margin: 0px;
   padding: 0px;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--accentColor); 
   font-family: var(--pageSubtitleFont);
 }
@@ -323,19 +326,28 @@ div.dots {
 /* LANDING RIGHT COLUMN END */
 
 /* LANDING LEFT COLUMN START */
+div.avatarWrapper {
+  width: 100%;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin: var(--stdPadding) 0px;
+}
 h2.titleText {
   margin: 0px;
-  padding: 0px;
-  line-height: 1;
-  font-size: 3.5rem;
+  padding: 0px; 
   text-align: left;
+  font-size: 3.5rem; 
   color: var(--accentColor);
   font-family: var(--pageHeadingFont); 
+  line-height: var(--default-line-height);
 }
-img.avatar { 
-  width: 60%;
+img.avatar {
+  margin: 0px;
+  width: 45vh;
   padding: 0px;
-  margin: 0 auto;
   aspect-ratio: 1;
   border-radius: 0px;
   /* EIGHT-POINTED STAR */
@@ -460,8 +472,8 @@ span.listViewItemMeta {
     font-size: 3rem;
     margin: 0px 0px var(--stdPadding) 0px;
   }
-  img.avatar { 
-    margin: 0 auto var(--stdPadding) auto;
+  img.avatar {
+    width: 100%;
   }
   /* LEFT COLUMN END */
 
