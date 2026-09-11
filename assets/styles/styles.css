@@ -146,8 +146,8 @@ h2,h3,h4 {
   font-family: var(--pageHeadingFont);
 }
 h2 { font-size: 3rem; }
-h3 { font-size: 2.5rem; }
-h4 { font-size: 2rem; }
+h3 { font-size: 2.25rem; }
+h4 { font-size: 1.5rem; }
 p {
   margin: 0px; 
   font-size: 1.25rem; 
@@ -447,9 +447,9 @@ span.listViewItemMeta {
   h2.pageHeading {
     font-size: 2.75rem;
   }
-  h2 { font-size: 2.25rem; }
-  h3 { font-size: 2.00rem; }
-  h4 { font-size: 1.75rem; }
+  h2 { font-size: 2.5rem; }
+  h3 { font-size: 2.0rem; }
+  h4 { font-size: 1.5rem; }
   p,a,li,code {
     font-size: 1rem;
   }

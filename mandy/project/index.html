@@ -1,0 +1,51 @@
+<!--
+WEBSITE by Alyx Shang.
+Licensed under the FSL v1
+-->
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>CREATING A MANDY PROJECT</title>
+  <meta name="theme-color" content="#000000"/>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/mandy/project">
+  <meta name="msapplication-TileColor" content="#000000"/>
+  <meta property="og:title" content="CREATING A MANDY PROJECT"/>
+  <link rel="stylesheet" href="/assets/styles/styles.css"/>
+  <meta name="description" content="Getting started and creating a Mandy project.">
+  <meta property="og:description" content="Getting started and creating a Mandy project."> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="/assets/favicons/manifest.json"/>
+  <link rel="stylesheet" href="/assets/styles/fonts.css" type="text/css"/>
+  <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png"/>
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png"/>
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png"/>
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png"/>
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png"/>
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png"/>
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png"/>
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png"/> 
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png"/> 
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-icon-192x192.png">
+ </head>
+ <body>
+  <div class="wrapper">
+   <div class="heading">
+    <h1>ALYX SHANG</h1>
+   </div>
+   <div class="content">
+    <div class="textContent">
+     <div class="breaker"></div>
+     <h2 class="pageHeading">CREATING A MANDY PROJECT</h2>
+     <p class="pageSubtitle">Getting started and creating a Mandy project. - [<a class="pageSubtitle" href="/">back</a>]</p>
+     <h2> Types of files</h2><p>A Mandy project is a directory full of a very specific set of files and</p><p>sub-directories. There are three types of files in every mandy project:</p><p>layout files, configuration files, and content files. All these types of</p><p>files are elaborated on in the following sections.</p><h2> Layout files</h2><p>Layout files dictate how the content you write in a content file is rendered on an HTML page. Layout files contain code that has some layout variables inside it. The code surrounding variables can be of any type since you do not have to neccessarily only render HTML. The variables inside the layout refer to content you have written or site-wide or page-wide configuration variables. For each of these two types of variables there exist two namespaces: <code>page</code> and <code>site</code>. Each of these namespaces have their sub-namespaces that can be accessed as outlined in the list of the sub-namespaces below:</p><ul><li> <code>site.config</code>: This namespace is the top namespaces for accessing configuration variables set in <code>config.jmu</code>. This namespace contains variables that <i>must</i> be set for a Mandy project to compile. Which variables these are, is listed in the "project configuration" section.</li><li> <code>site.config.user&lowbar;config</code>: This namespace is the namespace for user-defined site-wide variables.</li><li> <code>site.config.iter&lowbar;content</code>: This namespace assumes that the <code>iter&lowbar;content</code> configuration variables has been set in <code>config.jmu</code> and provides a namespace for looping over content files in a directory and outputting information for each content file in that directory.</li><li> <code>page.data</code>: A namespace that represents mandatory variables that must be set in the data section of a content file.</li></ul><ul><li> <code>page.data.user&lowbar;config</code>: Much like the site-wide <code>user&lowbar;config</code> section in the <code>site.config</code> namespace, this namespace represents user-defined variables for a page's data.</li></ul><p>The section below outlines the syntax for rendering data in a layout file:</p><ul><li> Rendering a variable: <code>{ site.config.user&lowbar;config.site&lowbar;title }</code> </li><li> Rendering depending on a condition: <code>{{ if site.config.user&lowbar;config.is&lowbar;cool&lowbar;cat}} content {{ else }} content {{ endif }}</code></li><li> Rendering something by looping over it: <code>{{ for post in site.config.iter&lowbar;content.blog&lowbar;posts }} {{ post.data.title }} {{ endfor }}</code></li></ul><h2> Configuration files</h2><p>In a Mandy project there exist two types of configuration files: site-wide configuration and data configuration files. Both of these types of files are written in the <a alt="A link to the JMU specification" href="/specs/jmu">Jirai Data Markup language</a></p><h3> Site-wide configuration</h3><p>Site-wide configuration is controlled from a file called <code>config.jmu</code> at the root of every Mandy project. This file has some mandatory fields that must be set and some fields that are optional. The list below outlines which variables are mandatory and which are optional:</p><ul><li> <code>dist&lowbar;dir</code>: This field is mandatory and tells Mandy in which directory to store the set of TML files produces by a compiled Mandy project.</li><li> <code>copy&lowbar;files</code>: This field is optional and describes any files or directories that need to be copied to the <code>dist&lowbar;dir</code>. This variables data type is a list of strings.</li><li> <code>iter&lowbar;content</code>: This field is optional and describes any directories containing content files you would like to loop over. You would use this in, for example, making a blog with Mandy. This variables data type is a list of strings.</li><li> <code>user&lowbar;config</code>: This field is optional and describes a map of key-value mappings, where the key is a string and the value is also a string. This field can be used to store additional site-wide configuration variables.</li></ul><h3> Data configuration</h3><p>Data configuration files are a series of <code>.jmu</code> files stored in the <code>data</code> directory, which is at the root of a Mandy project. Having this directory with these files is completely optional. The structure of each data file is a named dictionary of a list of key-value dictionaries, where each key is a string and each key's value is also a string. The name of this list of dictionaries is alsways <code>items</code>. The structure of each of these dictionaries must always be the same. Values of each dictionary can be different. To loop over data stored in a data file you would loop over the <code>site.data.data&lowbar;file&lowbar;name.items</code> list. <code>data&lowbar;file&lowbar;name</code> is the name of the data file you are looping over.</p><h2> Content files</h2><p>Content files are written in the <a alt="A link to the Jirai specification" href="/specs/jirai">Extended Jirai</a> format. These files must end in the <code>.ejirai</code> file extension. Each Extended Jirai file has two sections. The first section is the data section and the second is the data section. More information on how to write Extended Jirai content and the surrounding delimiters for both content and data sections can be found on the Extended Jirai specification page linked above. The data section of an Extended Jirai document is written in the Jirai Data Markup language. This data is accessed in layouts via the <code>page.data</code> namespace. The list below describes which variables are mandatory and which ones are optional:</p><ul><li> <code>layout</code>: This field is mandatory and describes which one of the layouts in the <code>layouts</code> is to be used to render the content for the current document. The layout's name is provided without any file extensions.</li><li> <code>title</code>: This field is mandatory and describes the title of the page.</li><li> <code>description</code>: This field is mandatory and is a short summary of the content in the current file.</li><li> <code>user&lowbar;config</code>: This field is optional and contains a list of key-value mappings, where the key is a string and the value is a string. Each mapping in this list represents any optional data the user would like to add for this specific page.</li></ul>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
