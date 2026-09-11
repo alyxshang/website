@@ -1,0 +1,49 @@
+(^-^)
+"layout" >~< "page"
+"title" >~< "THE JIRAI SPECIFICATION"
+"description" >~< "A detailed specification for the Jirai Markup Language."
+"user_config" >~< |
+  "date" >~< "2026/09/10"
+|
+(^-^)
+
+<3<3 Reference implementation
+
+The reference implementation in Rust can be viewed here: >(%[A link to Jirai's reference implementation][alyxshang/jirai][https://github.com/alyxshang/jirai])<
+
+<3<3 Preamble
+
+The Jirai Markup Language was born out of a need for a new, simpler markup language for my content-managament system and static-site generator, >(%[A link to the source code of the Mandy static-site generator][Mandy][https://github.com/alyxshang/mandy])<. The library I was using to compile Markdown documents into HTML had mixed and unpredictable behaviour and also made me depend on another person to maintain and keep that library alive. To mitigate both of those problems, I decided that I needed a library of my own and a compiler for a markup language that is easier to read and write. _Jirai_ came out of this effort. The official reference implementation written by me in Rust without the use of any AI can be found >(%[A link to the reference implementation][here][https://github.com/alyxshang/jirai])<. The user writes their markup in the Jirai format and this is then compiled to HTML.
+
+<3<3 Types of Jirai
+
+The Jirai language has two variants. One variant allows for a data layer to be added to a Jirai document, whereas the other variant does not include such a data layer. The former is called "Extended Jirai", the latter is simply Jirai. Extended Jirai documents have the file extension <.ejirai>. Documents containing only Jirai markup without a data layer, only have the <.jirai> file extension. Extended Jirai is useful in contexts where a data layer is needed to specify different parameters which are specific to the document but should not be included in the document's content.
+
+<3<3 Jirai Syntax
+
+<3<3<3 Block elements
+
+Jirai has the following block elements:
+
+~ Comments: These are demarcated with a hash sign at the beginning of the line and must end with a newline character.
+~ Unordered lists: Unordered lists start with the first list item. A list item starts with a tilde, followed by a space. Unordered lists must end with a newline character after the last list item.
+~ Headings: Headings are created in Jirai documents by using the ASCII heart symbol. This heart symbol is constituted by a smaller-than character, followed by the number three. The number of these ASCII heart symbols in sequence, not separated by spaces, indicates the level of the heading. This sequence of ASCII hearts  must be followed by a space. Any text that follows this space is the content of the heading. Headings must always end with a newline character.
+~ Paragraphs: Paragraphs are introduced by any character that does not introduce any of the three previously-mentioned block elements. All paragraphs must end with a newline character.
+
+<3<3<3 Inline elements
+
+Jirai inline elements can contain other inline elements within them. Jirai currently supports the following inline elements:
+
+~ Text: This is just normal text. This text can contain any characters that are not starting characters or end characters for any block elements or inline elements. 
+~ Inline code snippets: Inline code snippets are surrounded by angle brackets and cannot contain newline characters.
+~ Image links: Image links start with a larger-than sign and an open bracket, followed by a dollar sign. They end with a close bracket and a smaller-than sign. Between the dollar sign and the closing bracket there two sections each enclosed by square brackets. The first section contains the "alt" text for an image. The second section contains the URL to the image. Both sections _must_ be supplied.
+~ Links: Links start with a larger-than sign and an open bracket, followed by a percent sign. They end with a close bracket and a smaller-than sign. Between the percent sign and the closing bracket there three sections each enclosed by square brackets. The first section contains the "alt" text for an image. The second section contains the clickable link text. The third section contains the link's URL. All sections _must_ be supplied.
+~ Bold text: Bold text is surrounded by underscores and cannot contain newline characters.
+~ Italic text: Italic text is surrounded by asterisks and cannot contain newline characters.
+
+
+<3<3<3 Extended Jirai
+
+Extended Jirai documents are split into two sections: a data section and a content section. The data section is written in the Jirai Data Markup language and is surrounded by an ASCII smiley at the start and end of the section. Each ASCII smiley is followed by a newline character and the ASCII smileys enclose the data. An ASCII smiley is constituted of an opening bracket, a caret symbol, a dash, another caret symbol and a closing bracket. The content section of an Extended Jirai document is also followed by an ASCII smiley. Extended Jirai documents have three ASCII smileys inside them. More information on the Jirai Data Language can be found >(%[A link to the reference implementation of the Jirai Data Markup Language][here][https://github.com/alyxshang/jmu])<.
+
+(^-^)

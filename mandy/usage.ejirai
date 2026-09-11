@@ -1,0 +1,21 @@
+(^-^)
+"layout" >~< "page"
+"title" >~< "MANDY'S CLI USAGE"
+"description" >~< "A manual for using Mandy's CLI."
+(^-^)
+
+<3<3 Mandy's CLI commands
+
+Mandy has CLI commands for carrying out the following tasks: compiling a Mandy project into a set of HTML files, cleaning a compiled Mandy project, testing syntactic validity of Mandy layout files, content files, and configuration files, displaying version information, and displaying usage information. The next section describes each command in detail.
+
+<3<3 Command description
+
+Each command can be used with the double-minus, single-minus, or standalone command-line syntax.
+
+~ <--help, -h, help>: Displays information on how to use the <mandy> command.
+~ <--test, -t, test DATA>: Checks all layout, configuration, and content files in a Mandy project for syntactic validity. <DATA> describes the relative or absolute path of the directory containing the Mandy project.
+~ <--clean, -c, clean DATA>: Deletes the directory containing a set of HTML files produced by compiling a Mandy project. <DATA> describes the relative or absolute path of the directory containing the Mandy project.
+~ <--build, -b, build DATA>: Compiles a Mandy project into a set of HTML files into an output directory specified by the user in the project's configuartion file. <DATA> describes the relative or absolute path of the directory containing the Mandy project.
+~ <--version, -v version>: Displays information on the current version of Mandy installed.
+
+(^-^)

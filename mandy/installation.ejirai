@@ -1,0 +1,16 @@
+(^-^)
+"layout" >~< "page"
+"title" >~< "INSTALL MANDY"
+"description" >~< "Instructions on how to install Mandy."
+(^-^)
+
+<3<3 How to install Mandy
+
+This guide assumes that you know what a command-line is and that you know how to use command-line tools. You will need the following command-line tools to be available as commands:
+
+~ <cargo>: Mandy is written in Rust. Cargo is Rust's official package manager. Rust can be installed via RustUp, which can be found >(%[A link to the RustUp page][here][https://rustup.rs])<.
+~ <git>: Mandy uses Git to handle version control of its source code. You will need Git to be available from the command-line to install Mandy from its sources via Cargo. Git can be installed by visiting this link >(%[A link to Git's homepage][here][https://git-scm.org])<.
+
+After both of these tools have been installed correctly, Mandy can be installed by running this command: <cargo install --git https://github.com/alyxshang/mandy --branch v.0.1.0>
+
+(^-^)

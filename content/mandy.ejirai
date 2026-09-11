@@ -1,0 +1,15 @@
+(^-^)
+"layout" >~< "page"
+"title" >~< "MANDY DOCUMENTATION"
+"description" >~< "Documentation links for the Mandy static-site generator."
+(^-^)
+
+<3<3 Documentation links
+
+Mandy is a static-site generator much like Hugo or Jekyll. All static-site generators take content written in a simple text format like Markdown, or in Mandy's case, Jirai, and produce a set of HTML files, ready to be served as a static site. How the content written is rendered on an HTML page is controlled by layouts. Different static-site generators use different layout engines. Mandy is unique in that it is very light-weight and uses only 4 external dependencies, three of which were written by me. The links below should be a good guide on how to get started with Mandy. A set of content files, some configuration files, and layout files are called a Mandy project. Mandy projects are compiled into a set of HTML files by Mandy.
+
+~ Installation: >(%[A link to installation instructions for the Mandy static-site generator][Visit][/mandy/installation])<
+~ CLI Usage Guide: >(%[A link to instructions on how to use Mandy's CLI][Visit][/mandy/usage])<
+~ Create a Mandy project: >(%[A link to a guide on how to create a Mandy project][Visit][/mandy/project])<
+
+(^-^)

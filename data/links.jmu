@@ -1,0 +1,47 @@
+"items" >~< [
+  |
+    "name" >~< "SPECS"
+    "url" >~< "/content/specs"
+    "meta" >~< "01"
+  |, 
+  |
+    "name" >~< "ABOUT"
+    "url" >~< "/content/about"
+    "meta" >~< "02"
+  |,
+  |
+    "name" >~< "SKILLS"
+    "url" >~< "/content/skills"
+    "meta" >~< "03"
+  |,
+  |
+    "name" >~< "SERVICES"
+    "url" >~< "/content/services"
+    "meta" >~< "04"
+  |,
+  |
+    "name" >~< "MANDY"
+    "url" >~< "/content/mandy"
+    "meta" >~< "05"
+  |,
+  |
+    "name" >~< "TWITCH"
+    "url" >~< "https://twitch.tv/alyxshang"
+    "meta" >~< "Streams"
+  |, 
+  |
+    "name" >~< "TWITTER"
+    "url" >~< "https://x.com/alyxshang"
+    "meta" >~< "Social"
+  |,
+  |
+    "name" >~< "GITHUB"
+    "url" >~< "https://github.com/alyxshang"
+    "meta" >~< "Code"
+  |,
+  |
+    "name" >~< "E-MAIL"
+    "url" >~< "mailto:alyxshang@alyxshang.boo"
+    "meta" >~< "Contact Me"
+  |
+]

@@ -1,0 +1,13 @@
+(^-^)
+"layout" >~< "page"
+"title" >~< "LANGUAGE SPECIFICATIONS"
+"description" >~< "Specifications for languages I have invented."
+(^-^)
+
+<3<3 Specification links
+
+~ The Jirai Markup Language specification: >(%[A link to the specification for the Jirai Markup Language][Visit][/specs/jirai])<
+~ The Jirai Data Markup Language specification: >(%[A link to the specification for the Jirai Data Markup Language][Visit][/specs/jmu])<
+~ The Nene Programming Language specification: >(%[A link to the specification for the Nene programming language][Visit][/specs/nene])<
+
+(^-^)

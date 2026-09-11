@@ -1,0 +1,32 @@
+(^-^)
+"layout" >~< "page"
+"title" >~< "THE JMU SPECIFICATION"
+"description" >~< "A detailed specification for the Jirai Data Markup Language."
+"user_config" >~< |
+  "date" >~< "2026/09/10"
+|
+(^-^)
+
+<3<3 Reference implementation
+
+The reference implementation in Rust can be viewed here: >(%[A link to JMU's reference implementation][alyxshang/jmu][https://github.com/alyxshang/jmu])<
+
+<3<3 Preamble
+
+The Jirai Markup Data Language was born out of a need for a new, simpler data markup language for my content-managament system and static-site generator, >(%[A link to the source code of the Mandy  tatic-site generator][Mandy][https://github.com/alyxshang/mandy])<. The library I was using to deserialize JSON or YAML documents was too large and also made me depend on another person to maintain and keep that library alive. To mitigate both of those problems, I decided that I needed a library of my own and a parser and deserializer for a data markup language that is easier to read and write. _JMU_ came out of this effort. The official reference implementation written by me in Rust without the use of any AI can be found >(%[A link to the reference implementation][here][https://github.com/alyxshang/jmu])<. The only external dependency used by this reference implementation is <serde>, since this is the most widely-used library in the Rust ecosystem to deserialize data from a text format into a Rust data structure. JMU is a simple data-storage format like JSON or YAML to store data in key-value pairs, where the key is always a string.
+
+<3<3 Syntax
+
+JMU's syntax is very simple. JMU markup is a simple series ofassignments. Assignments are constituted of a key and a value. The key must always be a string. The value can be any of the data types outlined in the section below. A hash sign followed by text, followed by a newline character mark a single-line comments.
+
+<3<3 Data types
+
+JMU only knows five data types:
+
+~ Booleans: Booleans are written as either <true> or <false>.
+~ Integers: Integers are written as a number sequence without a post-decimal position.
+~ Decimal numbers: Decimal numbers are written as a number sequence with a dot separating pre-decimal position and post-decimal position.
+~ Strings: Strings are written as a character sequence enclosed by double quotes.
+~ Assignments blocks: Assignment blocks are enclosed by the pipe character above and below them.
+~ Lists: Lists are written as a comma-separated list of items. This list of items is enclosed by square brackets on either side and the items inside the list must always be of the same data type. The data type of an item can be any of the other data types supported. The final comma in the list should only be in front of the last item in the last.
+

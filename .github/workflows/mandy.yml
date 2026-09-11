@@ -1,0 +1,22 @@
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: "Run build."
+        uses: actions-rs/cargo@v1
+        with:
+          command: install
+          args: --git https://github.com/alyxshang/mandy --tag v.0.1.0
+      - name: "Run tests."
+        run: mandy -t .
+
+      - name: "Build the site."
+        run: mandy -b .
+
+      - name: "Deploy the built site."
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          branch: github-pages

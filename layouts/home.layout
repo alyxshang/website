@@ -1,0 +1,78 @@
+<!--
+WEBSITE by Alyx Shang.
+Licensed under the FSL v1
+-->
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>{page.data.title}</title>
+  <meta name="theme-color" content="#000000"/>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{page.url}">
+  <meta name="msapplication-TileColor" content="#000000"/>
+  <meta property="og:title" content="{page.data.title}"/>
+  <link rel="stylesheet" href="/assets/styles/styles.css"/>
+  <meta name="description" content="{page.data.description}">
+  <meta property="og:description" content="{page.data.description}"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="{site.config.user_config.manifest_path}"/>
+  <link rel="stylesheet" href="/assets/styles/fonts.css" type="text/css"/>
+  <meta name="msapplication-TileImage" content="{site.config.user_config.ms144icon}"/>
+  <link rel="apple-touch-icon" sizes="57x57" href="{site.config.user_config.57icon}"/>
+  <link rel="apple-touch-icon" sizes="60x60" href="{site.config.user_config.60icon}"/>
+  <link rel="apple-touch-icon" sizes="72x72" href="{site.config.user_config.72icon}"/>
+  <link rel="apple-touch-icon" sizes="76x76" href="{site.config.user_config.76icon}"/>
+  <link rel="apple-touch-icon" sizes="144x144" href="{site.config.user_config.144icon}"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="{site.config.user_config.152icon}"/>
+  <link rel="apple-touch-icon" sizes="114x114" href="{site.config.user_config.114icon}"/>
+  <link rel="apple-touch-icon" sizes="120x120" href="{site.config.user_config.120icon}"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="{site.config.user_config.180icon}"/> 
+  <link rel="icon" type="image/png" sizes="96x96" href="{site.config.user_config.96icon}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{site.config.user_config.32icon}"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="{site.config.user_config.16icon}"/> 
+  <link rel="icon" type="image/png" sizes="192x192" href="{site.config.user_config.192icon}">
+ </head>
+ <body>
+  <div class="wrapper">
+   <div class="heading">
+    <h1>{site.config.user_config.owner}</h1>
+   </div>
+   <div class="content">
+    <div class="stripes"></div>
+    <div class="landingContainer">
+     <div class="column">
+      <div class="infoContainers">
+      <h2 class="titleText">{site.config.user_config.title}</h2>
+      <div class="avatarWrapper">
+       <img class="avatar" src="{site.config.user_config.pfp_url}"/>
+      </div>
+      <h2 class="titleText">{site.config.user_config.debut_date}</h2>
+      </div>
+     </div>
+     <div class="column">
+      <div class="infoContainers">
+        <div class="textContainer">
+         <p class="infoText">{site.config.user_config.blurb_text}</p>
+        </div>
+        <div class="textContainer">
+         <ul class="infoText">
+          {{ for item in data.links.items }}
+          <li class="infoText">
+           <a class="infoText" href="{item.url}">
+            <span class="linkItem">{item.name}</span>
+            <div class="dots"></div>
+            <span class="linkItemText">[{item.meta}]</span>
+           </a>
+          </li> 
+          {{ endfor }}
+         </ul>
+        </div>
+      </div>
+     </div>
+    </div>
+    <div class="stripes"></div>
+   </div>
+  </div>
+ </body>
+</html>

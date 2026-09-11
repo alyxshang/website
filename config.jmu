@@ -1,0 +1,26 @@
+"dist_dir" >~< "dist"
+"copy_files" >~< ["assets", "CNAME"]
+"iter_content" >~< ["specs", "mandy"]
+"user_config" >~< |
+  "back_text" >~< "back"
+  "owner" >~< "ALYX SHANG"
+  "debut_date" >~< "DEBUT 01/05/2027" 
+  "title" >~< "Developer, Artist, VTuber" 
+  "16icon" >~< "/assets/favicons/favicon-16x16.png"
+  "32icon" >~< "/assets/favicons/favicon-32x32.png"
+  "96icon" >~< "/assets/favicons/favicon-96x96.png"
+  "manifest_path" >~< "/assets/favicons/manifest.json"
+  "57icon" >~< "/assets/favicons/apple-icon-57x57.png"
+  "60icon" >~< "/assets/favicons/apple-icon-60x60.png"
+  "76icon" >~< "/assets/favicons/apple-icon-76x76.png"
+  "72icon" >~< "/assets/favicons/apple-icon-72x72.png"
+  "ms144icon" >~< "/assets/favicons/ms-icon-144x144.png"
+  "114icon" >~< "/assets/favicons/apple-icon-114x114.png"
+  "120icon" >~< "/assets/favicons/apple-icon-120x120.png"
+  "144icon" >~< "/assets/favicons/apple-icon-144x144.png"
+  "152icon" >~< "/assets/favicons/apple-icon-152x152.png"
+  "180icon" >~< "/assets/favicons/apple-icon-180x180.png"
+  "192icon" >~< "/assets/favicons/android-icon-192x192.png" 
+  "pfp_url" >~< "https://avatars.githubusercontent.com/u/323574566?v=4"
+  "blurb_text" >~< "Welcome! You have reached my official website. I am a developer, artist, and VTuber from Vienna, Austria. If you would like to work with me, please send me an email. If you are here for watching my VTuber streams, the link to my Twitch is below! I look forward to seeing you there on 01/05/2027. Further information about me can be found at the links below."
+|

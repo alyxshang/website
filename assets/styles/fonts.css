@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'FluroBold';
+  src: url('../fonts/woff2/FluroBold.woff2') format('woff2'),
+       url('../fonts/woff/FluroBold.woff') format('woff'),
+       url('../fonts/ttf/FluroBold.ttf') format('truetype'),
+       url('../fonts/otf/FluroBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OwreKynge';
+  src: url('../fonts/woff2/OwreKynge.woff2') format('woff2'),
+       url('../fonts/woff/OwreKynge.woff') format('woff'),
+       url('../fonts/ttf/OwreKynge.ttf') format('truetype'),
+       url('../fonts/otf/OwreKynge.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SCP-Regular';
+  src: url('../fonts/woff2/SCP-Regular.woff2') format('woff2'),
+       url('../fonts/woff/SCP-Regular.woff') format('woff'),
+       url('../fonts/ttf/SCP-Regular.ttf') format('truetype'),
+       url('../fonts/otf/SCP-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
