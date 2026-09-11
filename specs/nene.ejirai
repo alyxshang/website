@@ -127,5 +127,4 @@ Function calls in Nene are sometimes neccessary for creating loops. There are no
 
 When handling FFI functionality or working with third-party libraries, it is sometimes desirable to call functions from external non-Nene libraries. Nene has builtin FFI support that is passed to the Wayob VM for interpretation and execution. FFI calls have the following syntax. The call is introduced via the "load" keyword, followed by a string representing the name of the symbol to be loaded. This is then followed by the "from" keyword and a string representing the library's name the symbol should be loaded from. To give the external function some data to work with, this expression is then followed by the "with" keyword, an open bracket, a comma-separated list of values representing the arguments to the external function and corresponding to the argument's different types, and a closing bracket. The last comma in the argument list should be *before* the last value corresponding to an argument.
 
-
 (^-^)

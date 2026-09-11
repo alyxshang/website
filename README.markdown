@@ -12,6 +12,14 @@ This repository contains the source code my official website. The source code is
 
 The live site can be viewed [here](https://alyxshang.boo).
 
+## SCREENSHOT
+
+The image below is a screenshot of the site:
+
+<p align="center">
+ <img src="screenshot/screenshot.png"/>
+</p>
+
 ## USAGE
 
 To use or test this site, you must have [Mandy](https://github.com/alyxshang/mandy) installed.
