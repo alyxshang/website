@@ -77,6 +77,8 @@ Nene supports seven separate data types. Detecting the use of any of the type na
 
 <3<3 Syntax
 
+Nene syntax is deliberately kept simple and borrows some its whitespace philosophy from Ruby and Python. In those two languages whitespace is important to separate tokens. Nene ignores whitespace completely.
+
 <3<3<3 Block statements
 
 Nene syntax supports five different types of block statements: comments, functions, structures, import statements, and testing-block definitions. These and scope guards are covered in more detail in the following sections.
