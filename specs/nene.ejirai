@@ -39,13 +39,15 @@ The following is a complete list of all the token-types and their character patt
 ~ <fin>: The keyword marking the end of a block.
 ~ close bracket: Closing a list or an expression.
 ~ <&equals;>: Carries out an is-equal comparison.
+~ asterisk: Multiplying two items with each other.
 ~ open bracket: Introducing a list of an expression.
 ~ <!&equals;>: Carries out an is-not-equal comparison.
 ~ <slay>: The scope guard to mark something as public.
 ~ <XX>: An integer with a maximum length of 64 digits.
-~ asterisk: Multiplying two items with each other.
+~ <rehearsal>: The keyword to introduce a testing block.
 ~ <with>: Supplies arguments to a symbol from an FFI-library.
 ~ <bag>: The keyword marking the introduction of a structure.
+~ <girlwait>: The keyword to mark a function as asynchronous.
 ~ <from>: The keyword to specify where to import an entity from.
 ~ <&lbrace;>: Opening the list of arguments for struct-initialization.
 ~ <&rbrace;>: Closing the list of arguments for struct-initialization.
@@ -59,11 +61,11 @@ This section will talk about the following important topics: memory management, 
 
 ~ Error-handling: Error-handling should be conducted via data structures in the standard library. Ideally, a structure should be defined that contains an <ok> and <err> field. Both of these fields should be pattern-matchable to extract the error as a value in case the <err> field is populated with data or the success value in case the <ok> field is populated with data.
 ~ Type-system rules: Nene is a statically-typed language, which means that the type of every piece of data has to be declared explictily and the user will get a syntax error if a piece of data's type is not declared. If type conversions are to be performed, this should be handled by a function or functions in the standard library. How this is done is left to implementers.
-~ Memory management: Data used and declared inside a function is only valid for the scope of that function. Data cannot be used across function bounds, unless it is passed between functions as an argument. Data is owned by the current function and de-allocated once the function's scope ends.
+~ Memory management: Data used and declared inside a function is only valid for the scope of that function. Data cannot be used across function bounds, unless it is passed between functions as an argument. Data is owned by the current function and de-allocated once the function's scope ends. The same applies to asychronous functions.
 
 <3<3 Data types
 
-Nene supports seven separate data types. The data types are listed below:
+Nene supports seven separate data types. Detecting the use of any of the type names of any of these data types should be done in the IR-generation phase of the interpreter.The data types are listed below:
 
 ~ Void: A "null" value that is only used when a function does not return anything The type name should be <sleep>.
 ~ Booleans: Booleans are stack-allocated values that can either be <yass> or <naww>. The type name should be <mood>.
@@ -77,7 +79,7 @@ Nene supports seven separate data types. The data types are listed below:
 
 <3<3<3 Block statements
 
-Nene syntax supports four different types of block statements: comments, functions, structures, and import statements. These and scope guards are covered in more detail in the following sections.
+Nene syntax supports five different types of block statements: comments, functions, structures, and import statements. These and scope guards are covered in more detail in the following sections.
 
 <3<3<3<3 Comments
 
@@ -97,7 +99,11 @@ Structures definitions are a series of key-value pairings of a field name and th
 
 <3<3<3<3 Function definition statements
 
-In a functional programming language, there are no imperative statements that explicitly assign a variable or explicitly return a value from a function. Every function is an expression that defines a rule for how a piece of data is to be handled. In Nene, a function is also an expression and there exists no "return" keyword. The value the last statements inside a function evaluates to is returned. Functions are statically-typed and are introduced with the "funky" keyword, followed by the function's name, opening brackets, the function's arguments and their types, followed by a closing bracket, and finally, the return type of the function. Function definitions are closed by the "fin" keyword. Inside each function, inline statements are written. These shall be elaborated on in the following section.
+In a functional programming language, there are no imperative statements that explicitly assign a variable or explicitly return a value from a function. Every function is an expression that defines a rule for how a piece of data is to be handled. In Nene, a function is also an expression and there exists no "return" keyword. The value the last statements inside a function evaluates to is returned. Functions are statically-typed and are introduced with the "funky" keyword, followed by the function's name, opening brackets, the function's arguments and their types, followed by a closing bracket, and finally, the return type of the function. Function definitions are closed by the "fin" keyword. If a function is to be asynchronous, the <girlwait> keyword must preceed the <funky> keyword and if the function is public, come after the <slay> keyword. If the asynchronous function is called the <girlwait> keyword should preceed the name of the function. Inside each function inline statements are written. These shall be elaborated on in the following section.
+
+<3<3<3<3 Testing-block definition statements
+
+In Nene, the syntax for writing unit-tests should be included in the language. Testing blocks in Nene are special functions that *must* return a boolean <true>, or in Nene's case a <yass>. If the testing block returns anything else, the test is marked as having failed. Testing blocks are introduced with the <rehearsal> keyword, followed by a short string containing a description of the test being run. The test block is terminated with the <fin> keyword.
 
 <3<3<3 Inline Statements
 
