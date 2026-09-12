@@ -5,19 +5,25 @@ Licensed under the FSL v1
 
 <!DOCTYPE html>
 <html>
- <head>
+<head>
   <title>{page.data.title}</title>
   <meta name="theme-color" content="#000000"/>
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{page.url}">
-  <meta name="msapplication-TileColor" content="#000000"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image:width" content="144"/>
+  <meta property="og:image:height" content="144"/>
+  <meta property="twitter:card" content="summary"/>
   <meta property="og:title" content="{page.data.title}"/>
+  <meta name="msapplication-TileColor" content="#000000"/>
   <link rel="stylesheet" href="/assets/styles/styles.css"/>
-  <meta name="description" content="{page.data.description}">
-  <meta property="og:description" content="{page.data.description}"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{page.data.description}"/>
+  <meta property="twitter:title" content="{page.data.title}"/>
+  <meta name="keywords" content="{page.data.user_config.keywords}"/>
+  <meta property="og:description" content="{page.data.description}"/> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="manifest" href="{site.config.user_config.manifest_path}"/>
+  <meta property="twitter:description" content="{page.data.description}"/>
   <link rel="stylesheet" href="/assets/styles/fonts.css" type="text/css"/>
+  <meta property="og:url" content="{site.config.user_config.baseurl}{page.url}"/>
   <meta name="msapplication-TileImage" content="{site.config.user_config.ms144icon}"/>
   <link rel="apple-touch-icon" sizes="57x57" href="{site.config.user_config.57icon}"/>
   <link rel="apple-touch-icon" sizes="60x60" href="{site.config.user_config.60icon}"/>
@@ -32,6 +38,8 @@ Licensed under the FSL v1
   <link rel="icon" type="image/png" sizes="32x32" href="{site.config.user_config.32icon}"/>
   <link rel="icon" type="image/png" sizes="16x16" href="{site.config.user_config.16icon}"/> 
   <link rel="icon" type="image/png" sizes="192x192" href="{site.config.user_config.192icon}">
+  <meta property="og:image" content="{site.config.user_config.baseurl}{site.config.user_config.144icon}"/>
+  <meta property="twitter:image" content="{site.config.user_config.baseurl}{site.config.user_config.144icon}"/>
  </head>
  <body>
   <div class="wrapper">
