@@ -5,6 +5,7 @@
   "back_text" >~< "back"
   "owner" >~< "ALYX SHANG"
   "debut_date" >~< "DEBUT 01/05/2027" 
+  "baseurl" >~< "https://alyxshang.boo"
   "title" >~< "Developer, Artist, VTuber" 
   "16icon" >~< "/assets/favicons/favicon-16x16.png"
   "32icon" >~< "/assets/favicons/favicon-32x32.png"
