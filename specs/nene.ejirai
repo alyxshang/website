@@ -65,7 +65,7 @@ This section will talk about the following important topics: memory management, 
 
 <3<3 Data types
 
-Nene supports seven separate data types. Detecting the use of any of the type names of any of these data types should be done in the IR-generation phase of the interpreter.The data types are listed below:
+Nene supports seven separate data types. Detecting the use of any of the type names of any of these data types should be done in the IR-generation phase of the interpreter. The data types are listed below:
 
 ~ Void: A "null" value that is only used when a function does not return anything The type name should be <sleep>.
 ~ Booleans: Booleans are stack-allocated values that can either be <yass> or <naww>. The type name should be <mood>.
@@ -79,7 +79,7 @@ Nene supports seven separate data types. Detecting the use of any of the type na
 
 <3<3<3 Block statements
 
-Nene syntax supports five different types of block statements: comments, functions, structures, and import statements. These and scope guards are covered in more detail in the following sections.
+Nene syntax supports five different types of block statements: comments, functions, structures, import statements, and testing-block definitions. These and scope guards are covered in more detail in the following sections.
 
 <3<3<3<3 Comments
 
