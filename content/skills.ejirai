@@ -2,6 +2,9 @@
 "layout" >~< "page"
 "title" >~< "SKILLS AND KNOWLEDGE"
 "description" >~< "A comprehensive list of all my skills and knowledge."
+"user_config" >~< |
+  "keywords" >~< "alyxshang freelancer developer zig rustlang"
+|
 (^-^)
 
 <3<3 Preamble

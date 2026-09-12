@@ -2,6 +2,9 @@
 "layout" >~< "page"
 "title" >~< "INSTALL MANDY"
 "description" >~< "Instructions on how to install Mandy."
+"user_config" >~< |
+  "keywords" >~< "mandy-static-site-generator static-site-generator mandy-installation"
+|
 (^-^)
 
 <3<3 How to install Mandy

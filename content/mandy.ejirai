@@ -2,6 +2,9 @@
 "layout" >~< "page"
 "title" >~< "MANDY DOCUMENTATION"
 "description" >~< "Documentation links for the Mandy static-site generator."
+"user_config" >~< |
+  "keywords" >~< "fair-software-license alyxshang mandy-static-site-generator static-site-generator rust rustlang"
+|
 (^-^)
 
 <3<3 Documentation links

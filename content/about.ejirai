@@ -2,14 +2,21 @@
 "layout" >~< "page"
 "title" >~< "ABOUT ME"
 "description" >~< "About me and this website."
+"user_config" >~< |
+  "keywords" >~< "Alyx Shang alyxshang about official website"
+|
 (^-^)
 
 <3<3 About me
 
-I'm a developer, artist, and VTuber from Vienna, Austria. I have been programming in a variety of languages since 2012. If you would like to find out more about my skills, you can do so >(%[A link to my skills page.][here][/content/skills])<.
+I'm a developer, artist, and VTuber from Vienna, Austria. I have been programming in a variety of languages since 2012. If you would like to find out more about my skills, you can do so >(%[A link to my skills page.][here][/content/skills])<. 
 
 <3<3 About this website
 
 This website was built completely without the use of any AI and built with the >(%[A link to the GitHub repository of the Mandy static-site generator][Mandy][https://github.com/alyxshang/mandy])< static-site generator and content-management system. This system was programmed by me and has been in use for multiple years now. The source for this website can be found >(%[A link to this website's GitHub repository][here][https://github.com/alyxshang/website])<.
+
+<3<3 Warnings and Disclaimers
+
+My avatar was taken from Pinterest because I am currently working on my own VTuber model. The graphics on my GitHub profile are also borrowed from Pinterest. All other content, including text and favivons were made by me. Stealing or using them to train AI is strictly prohibited and prosecutable by law.
 
 (^-^)

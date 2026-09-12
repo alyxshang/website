@@ -2,6 +2,9 @@
 "layout" >~< "page"
 "title" >~< "SERVICES ON OFFER"
 "description" >~< "A detailed list of the services I offer."
+"user_config" >~< |
+  "keywords" >~< "alyxshang freelancer services language-developer fullstack-developer webdeveloper"
+|
 (^-^)
 
 <3<3 Hire Me!

@@ -2,6 +2,9 @@
 "layout" >~< "page"
 "title" >~< "LANGUAGE SPECIFICATIONS"
 "description" >~< "Specifications for languages I have invented."
+"user_config" >~< |
+  "keywords" >~< "alyxshang jirai-language jmu-language nene-language"
+|
 (^-^)
 
 <3<3 Specification links

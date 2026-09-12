@@ -2,6 +2,9 @@
 "layout" >~< "page"
 "title" >~< "FAIR SOFTWARE LICENSE"
 "description" >~< "The verbatim text of the Fair Software License."
+"user_config" >~< |
+  "keywords" >~< "fair-software-license alyxshang fsl-v1"
+|
 (^-^)
 
 Version 1, September 3 2026

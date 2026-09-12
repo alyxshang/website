@@ -2,6 +2,9 @@
 "layout" >~< "page"
 "title" >~< "CREATING A MANDY PROJECT"
 "description" >~< "Getting started and creating a Mandy project."
+"user_config" >~< |
+  "keywords" >~< "mandy-static-site-generator static-site-generator mandy-project mandy-usage"
+|
 (^-^)
 
 <3<3 Types of files

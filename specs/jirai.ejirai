@@ -4,6 +4,7 @@
 "description" >~< "A detailed specification for the Jirai Markup Language."
 "user_config" >~< |
   "date" >~< "2026/09/10"
+  "keywords" >~< "jirai-markup-language jirai-language"
 |
 (^-^)
 

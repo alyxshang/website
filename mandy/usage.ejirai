@@ -2,6 +2,9 @@
 "layout" >~< "page"
 "title" >~< "MANDY'S CLI USAGE"
 "description" >~< "A manual for using Mandy's CLI."
+"user_config" >~< |
+  "keywords" >~< "mandy-static-site-generator static-site-generator mandy-usgae mandy-project"
+|
 (^-^)
 
 <3<3 Mandy's CLI commands
