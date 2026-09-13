@@ -58,7 +58,7 @@ cd website
 mandy -t .
 ```
 
-- 4.) You should have receieved a message about the success or failure and number of tests run.
+- 4.) You should have received a message about the success or failure of the tests and number of tests run.
 
 ## NOTE
 
