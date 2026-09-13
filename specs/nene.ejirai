@@ -24,7 +24,6 @@ The following is a complete list of all the token-types and their character patt
 ~ <,>: A list separator.
 ~ <->: Subtracting two items.
 ~ <-&gt;>: The case operator.
-~ <&tilde;&tilde;>: A comment.
 ~ <funky>: Introduces a function.
 ~ <yass>: The boolean <true> keyword.
 ~ <naww>: The boolean <false> keyword.
@@ -52,6 +51,7 @@ The following is a complete list of all the token-types and their character patt
 ~ <from>: The keyword to specify where to import an entity from.
 ~ <&lbrace;>: Opening the list of arguments for struct-initialization.
 ~ <&rbrace;>: Closing the list of arguments for struct-initialization.
+~ <&tilde;&tilde;>: Introduces a comment. The two tildes must be followed by a space.
 ~ <"...">: A string with any type and number of characters between the quotation marks.
 ~ <&lbrack;A-Za-z&lowbar;&rbrack;+>: An ident for a variable, function, structure or data type.
 ~ <XX.XX>: A floating-point number with a maximum of 32 digits before and after the decimal point, respectively.
