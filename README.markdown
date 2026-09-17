@@ -2,7 +2,7 @@
 
 ![Mandy CI](https://github.com/alyxshang/website/actions/workflows/mandy.yml/badge.svg)
 
-***A fast and light static-site generator.***
+***The source code for my official website.***
 
 ## ABOUT
 
