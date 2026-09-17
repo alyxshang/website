@@ -6,7 +6,7 @@
 
 ## ABOUT
 
-This repository contains the source code my official website. The source code is in the form of a Mandy project. This file structure is the file structure that the Mandy static-site generator expects. More information about Mandy can be found [here](https://github.com/alyxshang/mandy).
+This repository contains the source code for my official website. The source code is in the form of a Mandy project. The file structure in this repository is the file structure that the Mandy static-site generator needs to build a static site. More information about Mandy can be found [here](https://github.com/alyxshang/mandy).
 
 ## VISIT
 
@@ -14,7 +14,7 @@ The live site can be viewed [here](https://alyxshang.boo).
 
 ## USAGE
 
-To use or test this site, you must have [Mandy](https://github.com/alyxshang/mandy) installed.
+To use or test this site, you must have [Mandy](https://github.com/alyxshang/mandy) and [Git](https://git-scm.org) installed.
 
 ### Build the site.
 
