@@ -188,7 +188,7 @@ li {
 }
 li::before { 
   margin: 0px;
-  content: '-';
+  content: '⛧';
   font-size: 1.25rem; 
   padding: 0px 5px 0px 0px;
   color: var(--accentColor);
