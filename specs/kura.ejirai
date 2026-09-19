@@ -1,0 +1,9 @@
+(^-^)
+"layout" >~< "page"
+"title" >~< "THE KURA SPECIFICATION"
+"description" >~< "A detailed specification for the Kura Templating Language."
+"user_config" >~< |
+  "date" >~< "2026/09/19"
+  "keywords" >~< "kura-templating-language kura-language"
+|
+(^-^)
