@@ -415,7 +415,7 @@ span.listViewItemMeta {
 /* LIST VIEW END */
 
 /* MOBILE SECTION START */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) or (max-height: 1080px) {
 
   /* COLUMN LAYOUT START */
   div.wrapper {
