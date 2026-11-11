@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'FiraCode';
+  src: url('../fonts/otf/FiraCode-Regular.otf') format('opentype'),
+       url('../fonts/woff/FiraCode-Regular.woff') format('woff'),
+       url('../fonts/woff2/FiraCode-Regular.woff2') format('woff2'),
+       url('../fonts/ttff/FiraCode-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'RookCastle';
+  src: url('../fonts/otf/RookCastle.otf') format('opentype'),
+       url('../fonts/woff/RookCastle.woff') format('woff'),
+       url('../fonts/woff2/RookCastle.woff2') format('woff2'),
+       url('../fonts/ttff/RookCastle.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NewYork';
+  src: url('../fonts/otf/NewYork.otf') format('opentype'),
+       url('../fonts/woff/NewYork.woff') format('woff'),
+       url('../fonts/woff2/NewYork.woff2') format('woff2'),
+       url('../fonts/ttff/NewYork.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
